@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
-import NumberFormat from 'react-number-format'
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
@@ -27,18 +25,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const useStyleTypography = makeStyles({
-    root: {
-        width: '100%',
-        maxWidth: 500,
-    }
-})
+
 export default function CountryData() {
 
     const classes = useStyles();
-    const classesTypography = useStyleTypography();
     const [countryData, setcountryData] = useState();
-    const [dataloading, setdataloading] = useState(false);
 
     const [selectedCountry, setselectedCountry] = useState('');
 
@@ -46,7 +37,6 @@ export default function CountryData() {
 
     useEffect(() => {
         async function FetchcountryData() {
-            setdataloading(true);
             const response = await fetch('https://api.thevirustracker.com/free-api?countryTotals=ALL');
             const result = await response.json();
             var list = []
@@ -60,14 +50,12 @@ export default function CountryData() {
             console.log("Lists", country[0].title)
             setlistofcountries(list)
             setcountryData(country)
-            setdataloading(false)
 
 
         }
         FetchcountryData();
 
     }, [])
-
 
     return (
         <div className={classes.root}>

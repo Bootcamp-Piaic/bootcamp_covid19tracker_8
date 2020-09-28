@@ -140,49 +140,5 @@ export default function GlobalData() {
         </div>
     );
 
-    return (
-        <div className={classes.root}>
-            <Paper elevation={4} >
-                <div className={classesTypography.root}>
-                    <Typography variant='h3' gutterBottom style={{ color: 'black' }}>
-                        {globalData && globalData.results[0].total_cases}
-                    </Typography>
-                    <Typography variant='subtitle2' gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
-                        Global Data Record of Today
-                     </Typography>
-                </div>
-            </Paper>
-            <Paper elevation={4} >
-                <div className={classesTypography.root}>
-                    <Typography variant='h3' gutterBottom style={{ color: 'orange' }}>
-                        {globalData && globalData.results[0].total_active_cases + globalData.results[0].total_unresolved}
-                    </Typography>
-                    <Typography variant='subtitle2' gutterBottom style={{ color: 'orange', fontWeight: 'bold' }}>
-                        Active
-                     </Typography>
-                </div>
-            </Paper>
-            <Paper elevation={4} >
-                <div className={classesTypography.root}>
-                    <Typography variant='h3' gutterBottom style={{ color: 'green' }}>
-                        {globalData && globalData.results[0].total_recovered}
-                    </Typography>
-                    <Typography variant='subtitle2' gutterBottom style={{ color: 'green', fontWeight: 'bold' }}>
-                        Recovered
-                     </Typography>
-                </div>
-            </Paper>
-            <Paper elevation={4} >
-                <div className={classesTypography.root}>
-                    <Typography variant='h3' gutterBottom style={{ color: 'red' }}>
-                        {globalData && globalData.results[0].total_deaths}
-                    </Typography>
-                    <Typography variant='subtitle2' gutterBottom style={{ color: 'red', fontWeight: 'bold' }}>
-                        Fatalities
-                     </Typography>
-                </div>
-            </Paper>
-
-        </div>
-    );
+  
 }
