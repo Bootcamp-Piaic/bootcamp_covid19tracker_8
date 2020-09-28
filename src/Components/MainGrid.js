@@ -4,7 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 // importing components
-import GlobalData from './GlobalData'
+import GlobalData from './GlobalData';
+import CountryData from './CountryData';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -29,7 +30,9 @@ export default function CenteredGrid() {
           </Paper>
         </Grid>
         <Grid item xs={8}>
-          <Paper className={classes.paper}>country</Paper>
+          <Paper className={classes.paper}>
+              <CountryData></CountryData>
+          </Paper>
         </Grid>
       </Grid>
     </div>
