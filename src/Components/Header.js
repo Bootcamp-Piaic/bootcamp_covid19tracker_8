@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Label from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +29,7 @@ export default function Header() {
                     <Typography variant="h3" className={classes.title}>
                         Covid-19 Tracker
                     </Typography>
+                    <Label color="inherit">By : owys</Label>
                 </Toolbar>
             </AppBar>
         </div>

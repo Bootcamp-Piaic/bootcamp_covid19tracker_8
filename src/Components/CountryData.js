@@ -92,66 +92,138 @@ export default function CountryData() {
             </FormControl>
 
             <Paper elevation={4} style={{ width: '100%' }}>
-                Country : {countryData && countryData.map(c => c.title === selectedCountry ? (
+                
+                <Typography variant='h3' gutterBottom style={{ color: 'SALMON', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.title
             ) : (null)
             )
-                }
+                } 
+                     </Typography>
+                     <Typography variant='h6' gutterBottom style={{ color: 'SALMON', fontWeight: 'bold' }}>
+                
+                    Country
+                
+                     </Typography>
+                     
+                 
             </Paper>
             <Paper elevation={4} >
-                total_cases : {countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_cases
             ) : (null)
             )
-                }            </Paper>
+                } 
+                     </Typography>     
+                
+                   
+               <Typography variant='h6' gutterBottom style={{ color: 'black', fontWeight: 'bold' }}>
+                
+                Total cases
+            
+                 </Typography> 
+                
+                        </Paper>
             <Paper elevation={4} >
-                total_recovered : {countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'green', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_recovered
             ) : (null)
             )
                 } 
+                     </Typography>
+                
+                <Typography variant='h6' gutterBottom style={{ color: 'green', fontWeight: 'bold' }}>
+                
+                Recovered
+            
+                 </Typography>
             </Paper>
             <Paper elevation={4} >
-                total_unresolved :{countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'Indigo', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_unresolved
             ) : (null)
             )
                 } 
+                     </Typography>
+               
+                <Typography variant='h6' gutterBottom style={{ color: 'Indigo', fontWeight: 'bold' }}>
+                
+                 Unresolved
+            
+                 </Typography>
             </Paper>
             <Paper elevation={4} >
-                total_deaths : {countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'red', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_deaths
             ) : (null)
             )
                 } 
+                     </Typography>
+                <Typography variant='h6' gutterBottom style={{ color: 'red', fontWeight: 'bold' }}>
+                
+                 Deaths
+            
+                 </Typography>
             </Paper>
             <Paper elevation={4} >
-                total_new_cases_today :{countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'violet', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_new_cases_today
             ) : (null)
             )
                 } 
+                     </Typography> 
+                <Typography variant='h6' gutterBottom style={{ color: 'violet', fontWeight: 'bold' }}>
+                
+                New Cases Today
+            
+                 </Typography>
             </Paper>
             <Paper elevation={4} >
-                total_new_deaths_today :{countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'red', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_new_deaths_today
             ) : (null)
             )
                 } 
+                     </Typography>
+                <Typography variant='h6' gutterBottom style={{ color: 'red', fontWeight: 'bold' }}>
+                
+                 New Deaths Today
+            
+                 </Typography>
             </Paper>
             <Paper elevation={4} >
-                total_active_cases :{countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'orange', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_active_cases
             ) : (null)
             )
                 } 
+                     </Typography> 
+                <Typography variant='h6' gutterBottom style={{ color: 'orange', fontWeight: 'bold' }}>
+                
+                 Active Cases
+            
+                 </Typography>
             </Paper>
             <Paper elevation={4} >
-                total_serious_cases :{countryData && countryData.map(c => c.title === selectedCountry ? (
+            <Typography variant='h3' gutterBottom style={{ color: 'brown', fontWeight: 'bold' }}>
+                {countryData && countryData.map(c => c.title === selectedCountry ? (
                 c.total_serious_cases
             ) : (null)
             )
                 } 
+                     </Typography>
+                <Typography variant='h6' gutterBottom style={{ color: 'brown', fontWeight: 'bold' }}>
+                
+                Serious Cases
+            
+                 </Typography>
             </Paper>
 
         </div>
